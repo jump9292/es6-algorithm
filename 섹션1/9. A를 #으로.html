@@ -1,0 +1,48 @@
+<!--<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(s){
+                let answer="";
+                for (let x of s) {
+                    // console.log(x)
+                    if(x === 'A'){
+                        answer += '#';
+                    }else{
+                        answer += x;
+                    }
+                }
+                return answer;
+            }
+            
+            let str="BANANA";
+            console.log(solution(str));
+        </script>
+    </body>
+</html>-->
+
+
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(s){
+                let answer=s; //얕은복사
+                // s=s.replace(/A/g, '#')
+                answer=answer.replace(/A/g, '#') //정규식
+                // console.log(s)
+                return answer;
+            }
+            
+            let str="BANANA";
+            console.log(solution(str));
+        </script>
+    </body>
+</html>

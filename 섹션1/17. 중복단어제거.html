@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(s){  
+                let answer;
+                // console.log(s.indexOf("time"))
+                //고차함수, 인수로 함수를 전달받는 함수, 전달되는 함수 => 콜백함수
+                answer = s.filter(function (v, i) {//새로운 배열
+                    // console.log(v, i);
+                    // if(s.indexOf(v) === i){ //일치하면,
+                    //     return true;
+                    // }
+                    return s.indexOf(v) === i;
+                })
+                return answer;
+            }
+            let str=["good", "time", "good", "time", "student"];
+            console.log(solution(str));
+        </script>
+    </body>
+</html>

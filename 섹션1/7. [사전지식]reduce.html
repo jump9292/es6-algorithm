@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            //1.reduce
+            // function reduce(predicate, value) { //predicate 콜백함수,
+            //     let result = value;
+            //     for (let i = 0; i < a.length; i++) { //반복호출
+            //         result = predicate(result, a[i])
+            //     }
+            //     return result;
+            // }
+
+            a=[10,11,12,13,14,15]; //원본 배열의 합
+            answer=a.reduce(function(previousValue, currentValue, currentIndex, array) {
+                return previousValue + currentValue;
+            }, 0);
+            console.log(answer);
+        </script>
+    </body>
+</html>

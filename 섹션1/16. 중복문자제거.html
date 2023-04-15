@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(s){  
+                // let answer=0;
+                let answer="";
+                // console.log(s.indexOf("k", 3))
+                // for (let i = 0; i < s.length; i++) { //문자하나하나씩 탐색
+                    // console.log(s[i], i, s.indexOf(s[i]))
+                    // if(s.indexOf(s[i]) === i){
+                    //     answer += s[i];
+                    // }
+                // }
+
+                let pos = s.indexOf('k')
+                while (pos!==-1){
+                    answer++;
+                    pos = s.indexOf('k', pos+1);
+                }
+                return answer;
+            }
+            console.log(solution("ksekkset"));
+        </script>
+    </body>
+</html>

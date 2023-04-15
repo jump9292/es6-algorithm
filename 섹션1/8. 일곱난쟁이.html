@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(arr){
+                let answer=arr; //얕은 복사
+                let sum=arr.reduce((a,b)=> a+b, 0)//a에 누적, b를 탐색, 0 초기화
+                // console.log(sum)
+                for (let i = 0; i < 8; i++) {
+                    for (let j = i+1; j < 9; j++) { //?
+                        // console.log(arr[i], arr[j])
+                        if((sum-(arr[i]+arr[j])) === 100){
+                            arr.splice(j, 1) //인덱스 값을 제거
+                            arr.splice(i, 1) //인덱스 값을 제거
+                        }
+                    }
+                }
+                return answer;
+            }
+            
+            let arr=[20, 7, 23, 19, 10, 15, 25, 8, 13];
+            console.log(solution(arr));
+        </script>
+    </body>
+</html>

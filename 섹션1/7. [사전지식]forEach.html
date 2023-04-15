@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            //1.forEach
+            /*
+            function forEach(predicate, thisArg) {//고차함수, 콜백함수
+                // predicate <== 콜백함수, thisArg <== 생략가능
+                for (var i = 0; i < a.length; i++) {
+                    predicate(a[i], i);
+                }
+            }
+            */
+            a=[10,11,12,13,14,15]; //요소탐색, 함수형 프로그램
+            a.forEach(function(v, i){
+                console.log(v, i, this)
+            }, [1,2]);
+        </script>
+    </body>
+</html>

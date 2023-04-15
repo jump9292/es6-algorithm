@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(arr){         
+                // let answer = Math.min(...arr) //최소값
+                let answer = Math.min.apply(null, arr) //최소값
+                console.log(Math.max(...arr))
+                return answer;
+            }
+            let arr=[5, 7, 3, 2, 9, 11, 1];
+            console.log(solution(arr));
+        </script>
+    </body>
+</html>

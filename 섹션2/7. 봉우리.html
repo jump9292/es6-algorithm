@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(arr){  
+                let answer=0;
+                let n=arr.length; //정사각형
+                let dx=[-1, 0, 1, 0]; //방향 초기화
+                let dy=[0, 1, 0, -1]; //방향 초기화
+                for (let i = 0; i < n; i++) { //n전까지
+                    for (let j = 0; j < n; j++) { //이차원배열 탐색
+                        for (let k = 0; k < 4; k++) { // 4방향탐색
+                            let nx = i + dx[k] //갈려고하는 방향, 행좌표
+                            let ny = j + dy[k] //가려고하는 방향, 열좌표
+                            if (nx >= 0 && nx < n && ny >= 0 && ny < n && narr[nx][ny >= arr[i][j]]) {
+                                flag = 0;
+                                break; //for k 멈추기
+                            }
+                        }
+                        if(flag) answer++;
+                    }
+                }
+                return answer;
+            }
+
+            let arr=[[5, 3, 7, 2, 3], 
+                     [3, 7, 1, 6, 1],
+                     [7, 2, 5, 3, 4],
+                     [4, 3, 6, 4, 1],
+                     [8, 7, 3, 5, 2]];
+            console.log(solution(arr));
+        </script>
+    </body>
+</html>

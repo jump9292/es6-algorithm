@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            //1.filter
+            /*function filter(predicate, thisArg) {
+                let list = [];
+                for (let i = 0; i < a.length; i++) {
+                    if(predicate(a[i], i)){
+                        list.push(a[i]);
+                    }
+                }
+                return list;
+            }*/
+
+            a=[10,11,12,13,14,15]; //특정값 만
+            answer=a.filter(function(value, index, array) {
+                return value%2 === 1;
+            }, [1,2])
+            console.log(answer);
+        </script>
+    </body>
+</html>

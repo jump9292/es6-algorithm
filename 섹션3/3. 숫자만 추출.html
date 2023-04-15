@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(str){
+                let answer=0;
+                // let answer="";
+                for (let x of str) {
+                    if (!isNaN(x)) {
+                        answer = answer*10+Number(x);
+                    }
+                    // if(!isNaN(x)){
+                    //     answer +=x;
+                    // }
+                }
+                return answer;
+                // return parseInt(answer);
+            }
+            let str="g0en2T0s8eSoft";
+            console.log(solution(str));
+        </script>
+    </body>
+</html>
